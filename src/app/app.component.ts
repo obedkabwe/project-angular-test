@@ -7,15 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  nome = 'obed kabwe';
-
-
-  adicionar(){
-    console.log('Adicionar:'  + this.nome );
   
-    const number = Math.trunc(Math.random()*100) ;
-    
-    this.nome= "oberson" + number;
+nome = "obersong"
+
+  adicionar(nomeInput: any){
+    console.log(nomeInput.value);
   }
 
  
