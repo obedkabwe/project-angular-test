@@ -10,8 +10,8 @@ export class AppComponent {
   
 nome = "obersong"
 
-  adicionar(nomeInput: any){
-    console.log(nomeInput.value);
+  adicionar(nome: string){
+    this.nome=nome
   }
 
  
