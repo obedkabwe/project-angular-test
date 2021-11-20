@@ -9,27 +9,37 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   
-nome = "obersong"
 
+  ultimoId = 0;
+  nome = 'Thiago';
+  adicionado = false;
+  funcionarios: Funcionario[] = [];
 
-  adicionar(){
-    console.log("salut"+ this.nome);
-    const number = Math.round(Math.random()* 100);
-    this.nome='obed' +number
-    
+  adicionar() {
+    console.log(`Adicionando ${this.nome}`);
+    this.adicionado = true;
+
+    this.funcionarios.push({
+      id: ++this.ultimoId,
+      nome: this.nome
+    });
   }
 
- 
- 
-
-
-
-
-
-
-
-
-
-
-
 }
+
+interface Funcionario {
+  id: number
+  nome: string
+}
+
+
+
+
+
+
+
+
+
+
+
+
